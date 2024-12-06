@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { Brain, ExternalLink } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import { ModeToggle } from "./mode-toggle";
 import Image from "next/image";
 

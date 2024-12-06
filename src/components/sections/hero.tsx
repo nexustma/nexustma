@@ -1,29 +1,11 @@
 "use client";
-// import Spline from "@splinetool/react-spline/next";
 
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
-// import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
-import { useState } from "react";
-
-// const SplineComponent = dynamic(() => import("@splinetool/react-spline"), {
-//   ssr: false,
-//   loading: () => (
-//     <div className="w-full h-full flex items-center justify-center">
-//       <div className="animate-pulse bg-neutral-100 dark:bg-neutral-800 rounded-lg w-full h-full" />
-//     </div>
-//   ),
-// });
 
 export function HeroSection() {
-  // const [splineError, setSplineError] = useState(false);
-
-  // const handleSplineError = () => {
-  //   setSplineError(true);
-  // };
-
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(120,119,198,0.3),rgba(255,255,255,0))]" />
@@ -68,37 +50,9 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            // className="relative h-[600px] hidden lg:block"
-          >
-            {/* <Spline scene="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode" /> */}
-            {/* <div className="w-full h-full flex items-center justify-center">
-              <div className="animate-pulse bg-neutral-100 dark:bg-neutral-800 rounded-lg w-full h-full" />
-            </div> */}
-            {/* {!splineError ? (
-              <SplineComponent
-                scene="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode"
-                onError={handleSplineError}
-              />
-            ) : (
-              <div className="w-full h-full flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 rounded-lg">
-                <div className="text-center p-8">
-                  <p className="text-neutral-600 dark:text-neutral-300">
-                    Visualización 3D no disponible
-                  </p>
-                </div>
-              </div>
-            )} */}
-          </motion.div>
+          ></motion.div>
         </div>
       </div>
     </section>
   );
 }
-
-// export default function Home() {
-//   return (
-//     <main>
-//       <Spline scene="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode" />
-//     </main>
-//   );
-// }
