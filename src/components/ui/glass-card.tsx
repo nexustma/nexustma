@@ -1,8 +1,10 @@
 import { cn } from "@/lib/utils";
 
-interface GlassCardProps extends React.HTMLAttributes<HTMLDivElement> {}
-
-export function GlassCard({ className, children, ...props }: GlassCardProps) {
+export function GlassCard({
+  className,
+  children,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(
