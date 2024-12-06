@@ -1,27 +1,28 @@
 "use client";
+// import Spline from "@splinetool/react-spline/next";
 
 import { Button } from "@/components/ui/button";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
+// import dynamic from "next/dynamic";
 import { motion } from "framer-motion";
 import { useState } from "react";
 
-const SplineComponent = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full flex items-center justify-center">
-      <div className="animate-pulse bg-neutral-100 dark:bg-neutral-800 rounded-lg w-full h-full" />
-    </div>
-  ),
-});
+// const SplineComponent = dynamic(() => import("@splinetool/react-spline"), {
+//   ssr: false,
+//   loading: () => (
+//     <div className="w-full h-full flex items-center justify-center">
+//       <div className="animate-pulse bg-neutral-100 dark:bg-neutral-800 rounded-lg w-full h-full" />
+//     </div>
+//   ),
+// });
 
 export function HeroSection() {
-  const [splineError, setSplineError] = useState(false);
+  // const [splineError, setSplineError] = useState(false);
 
-  const handleSplineError = () => {
-    setSplineError(true);
-  };
+  // const handleSplineError = () => {
+  //   setSplineError(true);
+  // };
 
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
@@ -63,15 +64,19 @@ export function HeroSection() {
               </Button>
             </div>
           </motion.div>
-          {/* <motion.div
+          <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-            className="relative h-[600px] hidden lg:block"
-          > */}
-          {/* {!splineError ? (
+            // className="relative h-[600px] hidden lg:block"
+          >
+            {/* <Spline scene="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode" /> */}
+            {/* <div className="w-full h-full flex items-center justify-center">
+              <div className="animate-pulse bg-neutral-100 dark:bg-neutral-800 rounded-lg w-full h-full" />
+            </div> */}
+            {/* {!splineError ? (
               <SplineComponent
-                scene="https://prod.spline.design/6PYVwgFZNVsEyAX3/scene.splinecode"
+                scene="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode"
                 onError={handleSplineError}
               />
             ) : (
@@ -83,9 +88,17 @@ export function HeroSection() {
                 </div>
               </div>
             )} */}
-          {/* </motion.div> */}
+          </motion.div>
         </div>
       </div>
     </section>
   );
 }
+
+// export default function Home() {
+//   return (
+//     <main>
+//       <Spline scene="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode" />
+//     </main>
+//   );
+// }
