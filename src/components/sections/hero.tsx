@@ -50,7 +50,13 @@ export function HeroSection() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1 }}
-          ></motion.div>
+          >
+            <script
+              type="module"
+              src="https://unpkg.com/@splinetool/viewer@1.9.48/build/spline-viewer.js"
+            ></script>
+            <spline-viewe url="https://prod.spline.design/PtRAygcP-Ttp0lQI/scene.splinecode"></spline-viewe>{" "}
+          </motion.div>
         </div>
       </div>
     </section>
