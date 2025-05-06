@@ -2,6 +2,8 @@
 
 import { Mail, Phone } from "lucide-react";
 import { GlassCard } from "../ui/glass-card";
+import { Button } from "../ui/button";
+import Link from "next/link";
 
 export function ContactSection() {
   return (
@@ -11,29 +13,27 @@ export function ContactSection() {
         <div className="max-w-md mx-auto">
           <GlassCard className="text-center">
             <div className="flex flex-col items-center gap-4">
-              <div className="flex items-center gap-2">
-                <Phone className="w-5 h-5 text-neutral-700 dark:text-neutral-200" />
-                <span>829-772-1111</span>
-              </div>
+              <Button className="flex items-center gap-2">
+                <Phone className="w-5 h-5" />
+                <Link href="https://wa.me/18297721111" target="_blank">
+                  Envíame un mensaje
+                </Link>
+              </Button>
               <div className="flex flex-col items-center gap-2">
                 <div className="flex items-center gap-2">
-                  <Mail className="w-5 h-5 text-neutral-700 dark:text-neutral-200" />
+                  <Mail className="w-5 h-5" />
                   <a
                     href="mailto:nexustma@gmail.com"
-                    className="hover:text-neutral-700 dark:hover:text-neutral-200"
+                    className="text-neutral-600 dark:text-neutral-300 hover:text-neutral-700 dark:hover:text-neutral-200"
                   >
                     nexustma@gmail.com
                   </a>{" "}
                 </div>
-                {/* All right reserved */}
               </div>
             </div>
           </GlassCard>
         </div>
       </div>
-      <p className="text-xs text-center mt-20 text-neutral-600 dark:text-neutral-300">
-        &copy; {new Date().getFullYear()} All right reserved
-      </p>
     </section>
   );
 }
